@@ -1,0 +1,23 @@
+sum of odd length sub arrays
+
+
+var sumOddLengthSubarrays = function(arr) {
+   
+  var sum=0
+for(let i=0;i<=arr.length-1;i++){
+  let count=1
+  for(let j=i;j<=arr.length-1;j++){
+        for(var k=i;k<=j;k++){
+            if(count%2!=0){
+            sum=sum+arr[k]  
+             
+            }
+           
+        }
+    count++
+  }
+}
+return sum
+
+    
+};

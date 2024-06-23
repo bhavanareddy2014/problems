@@ -1,0 +1,9 @@
+var uniqueOccurrences = function(arr) {
+    let hash = {}
+    arr.forEach ( elem => {
+        hash[elem] = (hash[elem] || 0) + 1
+    })
+    let hello = Object.values(hash)
+    let set = new Set(hello);
+    return set.size === hello.length;
+};

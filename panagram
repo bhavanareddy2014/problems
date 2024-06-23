@@ -1,0 +1,16 @@
+var checkIfPangram = function(sentence) {
+    let duplicates = "";
+    let n =  26
+    let string = sentence.split(" ").join("")
+    for(let char of string){
+        if(duplicates.includes(char) === false){
+             duplicates += char
+        }
+    }
+    if(n === duplicates.length){
+        return true;
+    }
+    else {
+      return false;  
+    }
+};

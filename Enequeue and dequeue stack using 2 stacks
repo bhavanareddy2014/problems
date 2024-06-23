@@ -1,0 +1,17 @@
+var inputStack = [];
+var outputStack = [];
+
+function eneque(stackInput,item){
+    return stackInput.push(item)
+}
+
+function dequeue(stackInput,stackOutput){
+    if(stackOutput.length <=0){
+        if(stackInput.length >0){
+            var elements = stackInput.pop();
+            stackOutput.push(elements)
+        }
+    }
+    
+    return stackOutput.pop();
+}

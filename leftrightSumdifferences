@@ -1,0 +1,18 @@
+var leftRigthDifference = function(nums) {
+    let answer = [], leftSum = [], rightSum = [], a = 0, b= 0;
+    for(let i=0; i<nums.length; i++){
+        leftSum.push(a);
+        a = a + nums[i];
+       console.log(rightSum)
+        rightSum.unshift(b);
+        b = b + nums[nums.length - 1 - i];
+    }
+    for(let j=0; j<nums.length; j++){
+    answer[j] = Math.abs(leftSum[j] - rightSum[j]);
+    }
+    return answer;
+};
+console.log(leftRigthDifference([10,4,8,3]));
+
+
+

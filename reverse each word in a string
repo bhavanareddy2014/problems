@@ -1,0 +1,16 @@
+// Reverse each word in a sentence
+
+var string = "Welcome to this Javascript Guide!"
+
+var reverseEntireString = reverseStringSeperator(string,"")
+// var reverseEachWord = string.split(" ").reverse().join(" ")
+
+console.log(reverseEntireString,"h")
+var reverseEachWord = reverseStringSeperator(reverseEntireString," ")
+console.log(reverseEachWord,"n")
+
+function reverseStringSeperator(string,seperator){
+    return string.split(seperator).reverse().join(seperator)
+}
+
+console.log(reverseStringSeperator(string,""));

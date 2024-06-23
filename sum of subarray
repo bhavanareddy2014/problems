@@ -1,0 +1,26 @@
+class Solution 
+{
+    //Function to find a continuous sub-array which adds up to a given number.
+    subarraySum(arr, n, sum)
+    {
+        let curr_sum =0;
+        
+        for (let i = 0; i < n; i++) 
+    {
+        curr_sum = arr[i];
+  
+        // Try all subarrays starting with 'i'
+        for (let j = i + 1; j <= n; j++) 
+        {
+            if (curr_sum == sum) 
+            {
+                return [i + 1 , j];
+            }
+            if (curr_sum > sum || j == n)
+                break;
+            curr_sum = curr_sum + arr[j];
+        }
+    }
+        return [-1];
+    }
+}

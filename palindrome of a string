@@ -1,0 +1,29 @@
+function isPalindrome(word){
+ var newWord = word.toLowerCase();
+ 
+ var lettersOnly = word.toLowerCase().replace(/\s/g, "")
+ 
+ return lettersOnly === lettersOnly.split("").reverse().join("")
+ 
+}
+
+console.log(isPalindrome('race Car'))
+
+function checkPalindromeNumber(num){
+    var remainder ,temp, reversedNumber =0;
+    temp = num
+    while(num > 0 ){
+        remainder = num % 10;
+        num = parseInt(num/10)
+        reversedNumber = reversedNumber * 10 + remainder
+        console.log(reversedNumber,"num")
+    }
+    console.log(reversedNumber,"num")
+    if(reversedNumber == temp){
+        return true
+    }
+    else {
+        return false;
+    }
+}
+

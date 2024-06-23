@@ -1,0 +1,9 @@
+var isPerfectSquare = function(num) {
+    let a = Math.sqrt(num)
+    if(a.toString().includes(".")){
+        return false
+    }
+    else {
+        return true;
+    }
+};

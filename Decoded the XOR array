@@ -1,0 +1,30 @@
+First we need to understand XOR operation
+
+👉XOR operations:
+0+0 = 0
+1+1 = 0
+1+0 = 1
+0+1 = 1
+
+Let's perform some binary XOR operation from the input above:
+1 => 0001
+0 => 0000
+res = 0001 (As per the XOR operation, we got the results as 0001, which is "1")✅
+
+for, 0 XOR 2 = 2✅
+
+then 2 XOR 1 will be,
+2 => 0010
+1 => 0001
+res = 0011 ( 3 )✅
+
+This is how we got the output as [1, 2, 3] ✅
+
+var decode = function(encoded, first) {
+    let arr = [encoded.length +1]
+     arr[0]= first
+    for(let i=0;i< encoded.length ;i++){
+        arr[i+1] = encoded[i] ^ arr[i]
+    }
+    return arr;
+};
